@@ -1,4 +1,6 @@
 
+@import './motionSwiper.scss';
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -38,8 +40,6 @@ button:focus-visible {
 
 // _____________________
 
-
-
 :root {
   scroll-behavior: auto;
 }
@@ -55,69 +55,3 @@ section {
   align-items: center;
   flex-direction: column;
 }
-.swiper-container {
-  overflow-x: clip;
-  width: 100%; // because parent is flexbox
-}
-.swiper-skew {
-  // transform: rotate(3deg);
-}
-.swiper {
-  overflow: visible;
-}
-.swiper-wrapper {
-  height: 65vh;
-  transition-timing-function: cubic-bezier(.21,.73,.24,1) !important;
-  @media (max-width: 900px) {
-    height: 30vh;
-  }
-}
-.swiper-slide {
-  flex-shrink: 0;
-  margin-right: 20px;
-  width: auto;
-  aspect-ratio: 0.9;
-  height: 100%;
-  // border-radius: 16px;
-  background-color: grey;
-  // -webkit-clip-path: url(#svgmask);
-  // clip-path: url(#svgmask);
-  // @media (max-width: 900px) {
-  //   height: 10vh;
-  //   width: 8vh;
-  // }
-  
-  // overflow: hidden;
-}
-// .swiper-slide-prev {
-//   transform: translateY(10px) rotate(-2deg);
-// }
-// .swiper-slide {
-//   &:has(+ .swiper-slide-prev) {
-//     transform: translateY(37px) rotate(-4deg);
-//   }
-// }
-// .swiper-slide-next {
-//   transform: translateY(10px) rotate(2deg);
-//   & + * {
-//     transform: translateY(40px) rotate(4deg);
-//   }
-// }
-
-.movement-path {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 10%;
-  fill: red;
-  &__left {
-    left: 0;
-    // transform: rotate(-90deg);
-  }
-  &__right {
-    right: -10%;
-    // transform: scale(-1, 1);
-    // transform: rotate(90deg);
-  }
-}
-

@@ -1,0 +1,25 @@
+.swiper-container {
+	overflow-x: clip;
+	width: 100%; // because parent is flexbox
+}
+.swiper-skew {
+	// transform: rotate(3deg);
+}
+.swiper {
+	overflow: visible;
+}
+.swiper-wrapper {
+	height: 65vh;
+	transition-timing-function: cubic-bezier(0.21, 0.73, 0.24, 1) !important;
+	@media (max-width: 900px) {
+		height: 30vh;
+	}
+}
+.swiper-slide {
+	flex-shrink: 0;
+	margin-right: 20px;
+	width: auto;
+	aspect-ratio: 0.9;
+	height: 100%;
+	background-color: grey;
+}
