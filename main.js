@@ -1,7 +1,15 @@
 import './style.scss';
 import { MotionSwiper } from './motionSwiper.js';
 
-const motionSwiper = new MotionSwiper('.swiper');
+const motionSwiper = new MotionSwiper('.motion-swiper', {
+	// loop: true,
+	// lerp: 0.1,
+	// speed: 2.5,
+	// centered: true,
+	// teasing: true,
+	// normalizingSpeed: 0.8,
+	// swipeOnClick: true,
+});
 
 // gsap.registerPlugin(ScrollTrigger);
 // const tl = gsap.timeline();
