@@ -1,13 +1,11 @@
-# MotionSwiper
+# <img src="static/favicon.png" height="20" /> MotionSwiper
 
-Introducing MotionSwiper – a minimal draggable slider with a seamless and fluid bending motion effect like [this pen by Jesper Landberg](https://codepen.io/ReGGae/live/povjKxV).
+Introducing MotionSwiper – a minimal draggable slider with a seamless and fluid bending motion effect like seen in [this pen by Jesper Landberg](https://codepen.io/ReGGae/live/povjKxV).
 
 It's built with GSAP and does not rely on WebGL/ThreeJs or Canvas, ensuring there are no drawbacks in terms of **accessibility** or **performance**.
 
 ## Demo
 View a live demo here: https://motion-swiper.vercel.app/
-
-Codepen: https://codepen.io/jramke/pen/zYmdeeX?editors=0010
 
 MotionSwiper in the wilds:
 - https://www.joostramke.com/
@@ -16,18 +14,14 @@ MotionSwiper in the wilds:
 
 ## Getting started
 
-MotionSwiper is created with [GSAP](https://gsap.com/) so you have to install it before you can use MotionSwiper.
+MotionSwiper is created with [GSAP](https://gsap.com/) so its installed with MotionSwiper if needed.
 
 ```bash
-npm i motion-swiper gsap
+npm i motion-swiper
 ```
 
 ### Import
 ```js
-// third party library
-import { gsap } from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger'; // needed for teasing option
-
 // MotionSwiper functionality
 import MotionSwiper from "motion-swiper";
 

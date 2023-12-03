@@ -46,6 +46,10 @@
     }
 </style>
 
+<svelte:head>
+    <title>MotionSwiper</title>
+</svelte:head>
+
 <div id="github" class="position-fixed top-0 end-0 p-4">
     <a href="https://github.com/jramke/motion-swiper" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-github" viewBox="0 0 16 16">

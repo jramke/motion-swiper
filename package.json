@@ -1,6 +1,6 @@
 {
 	"name": "motion-swiper",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "MIT",
 	"description": "Draggable slider with a fluid bending motion effect but no Threejs as usual",
 	"homepage": "https://motion-swiper.vercel.app/",
@@ -29,8 +29,8 @@
 			"types": "./dist/index.d.ts",
 			"default": "./dist/index.js"
 		},
-		"./scss": "./dist/motionSwiper.scss",
-		"./css": "./dist/motionSwiper.css"
+		"./css": "./dist/motionSwiper.css",
+		"./scss": "./dist/motionSwiper.scss"
 	},
 	"files": [
 		"dist",
@@ -38,7 +38,10 @@
 		"!dist/**/*.spec.*"
 	],
 	"peerDependencies": {
-		"svelte": "^4.0.0"
+		"svelte": "^4.0.0",
+		"@studio-freight/lenis": "^1.0.29",
+		"bootstrap": "^5.3.2",
+		"sass": "^1.69.5"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
@@ -55,9 +58,6 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"dependencies": {
-		"@studio-freight/lenis": "^1.0.29",
-		"bootstrap": "^5.3.2",
-		"gsap": "^3.12.3",
-		"sass": "^1.69.5"
+		"gsap": "^3.12.x"
 	}
 }
