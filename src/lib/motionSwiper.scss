@@ -1,0 +1,48 @@
+.motion-swiper {
+	--swiper-slide-spacing: 1.5vw;
+	--swiper-height: 35vh;
+	--swiper-slide-width: 40vw;
+	@media (min-width: 1100px) {
+        --swiper-height: 55vh;
+        --swiper-slide-width: 28vw;
+    }
+	overflow: hidden;
+	cursor: grab;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	height: var(--swiper-height);
+	&.is-dragging {
+        cursor: grabbing;
+	}
+	&__wrapper {
+        display: flex;
+		position: absolute;
+		z-index: 1;
+		height: 100%;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	&__slide {
+        position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: var(--swiper-slide-width);
+		height: 100%;
+		padding: 0 calc(var(--swiper-slide-spacing) / 2);
+		overflow: hidden;
+	}
+	&__inner {
+        height: 100%;
+		img {
+            object-fit: cover;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			user-select: none;
+			z-index: -1;
+		}
+	}
+}
