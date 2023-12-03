@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { lerp, clamp } from "./utils.js";
 
 export default class MotionSwiper {
