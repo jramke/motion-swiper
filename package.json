@@ -1,6 +1,6 @@
 {
 	"name": "motion-swiper",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"license": "MIT",
 	"description": "Draggable slider with a fluid bending motion effect but no Threejs as usual",
 	"homepage": "https://motion-swiper.vercel.app/",
