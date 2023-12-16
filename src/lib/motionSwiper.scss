@@ -6,6 +6,9 @@
         --swiper-height: 55vh;
         --swiper-slide-width: 28vw;
     }
+	@media (max-width: 767.98px) {
+		--swiper-height: 25vh;
+	}
 	overflow: hidden;
 	cursor: grab;
 	width: 100%;
@@ -14,6 +17,9 @@
 	height: var(--swiper-height);
 	&.is-dragging {
         cursor: grabbing;
+		.motion-swiper__inner {
+			pointer-events: none;
+		}
 	}
 	&__wrapper {
         display: flex;
@@ -33,9 +39,12 @@
 		height: 100%;
 		padding: 0 calc(var(--swiper-slide-spacing) / 2);
 		overflow: hidden;
+		user-select: none;
+		-webkit-user-drag: none;
 	}
 	&__inner {
         height: 100%;
+		display: block;
 		img {
             object-fit: cover;
 			width: 100%;
