@@ -91,6 +91,11 @@ export default class MotionSwiper {
 		this.scrollY = pos;
 		this.touchStart = this.touchX;
 	}
+	preventScroll(e){
+		e.preventDefault();
+		e.stopPropagation();
+		return false;
+	}
 	bind() {
 		this.event.pointerdown = (e) => this.handleTouchStart(e);
 		this.event.pointermove = (e) => this.handleTouchMove(e);
@@ -144,9 +149,16 @@ export default class MotionSwiper {
             this.scrollSpeed = lerp(this.scrollSpeed, 0, this.options.lerp);
 		}
 
+		if (this.pressed) {
+			window.addEventListener('wheel', this.preventScroll, { passive: false });
+		} else {
+			window.removeEventListener('wheel', this.preventScroll);
+		}
+
 		gsap.to(this.animations[this.direction], { 
 			progress: this.progress 
 		});
+
 		if (!this.isDragging) {
 			this.normalizeMask();
 		}

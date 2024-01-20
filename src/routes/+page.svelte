@@ -7,15 +7,24 @@
 	import { onMount } from 'svelte';
 
     onMount(() => {
-        const motionSwiper = new MotionSwiper('.motion-swiper');
+        // gsap.registerPlugin(ScrollTrigger);
+        // const lenis = new Lenis()
+        // lenis.on('scroll', ScrollTrigger.update)
+        // gsap.ticker.add((time)=>{
+        //     lenis.raf(time * 1000)
+        // })
+        // gsap.ticker.lagSmoothing(0)
 
-        gsap.registerPlugin(ScrollTrigger);
-        const lenis = new Lenis()
-        lenis.on('scroll', ScrollTrigger.update)
-        gsap.ticker.add((time)=>{
-            lenis.raf(time * 1000)
-        })
-        gsap.ticker.lagSmoothing(0)
+        const motionSwiper = new MotionSwiper('.motion-swiper', {
+            // teasing: false,
+        });
+
+        // function raf(time) {
+        //     lenis.raf(time)
+        //     requestAnimationFrame(raf)
+        // }
+
+        // requestAnimationFrame(raf)
     })
 
 </script>
@@ -53,7 +62,6 @@
     }
 
     section {
-        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -74,7 +82,7 @@
         </svg>
     </a>
 </div>
-<section style="min-height: 50vh; height: auto;">
+<section style="min-height: 50vh;">
     <div class="container text-center">
         <img src="/favicon.png" class="mb-3" alt="Waving hand" style="width: 40px; height: auto;">
         <h1 class="mb-4">MotionSwiper</h1>
@@ -88,7 +96,7 @@
         </p>
     </div>
 </section>
-<section>
+<section style="padding-bottom: 8rem;">
     <div class="motion-swiper">
         <div class="motion-swiper__wrapper">
             <div class="motion-swiper__slide">
