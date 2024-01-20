@@ -23,7 +23,7 @@ export default class MotionSwiper {
 			centered: true,
 			teasing: true,
 			normalizingSpeed: 0.8,
-			swipeOnClick: false,
+			swipeOnClick: true,
         }, options);
 
 		this.scrollSpeed = 0;

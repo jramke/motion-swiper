@@ -20,16 +20,31 @@
 
 </script>
 
-<style lang="scss">
+<style>
     @import "/node_modules/bootstrap/scss/bootstrap.scss";
 
 
+    /* LENIS START */
     html.lenis {
-        height: auto;
+    height: auto;
     }
+
     .lenis.lenis-smooth {
-        scroll-behavior: auto;
+    scroll-behavior: auto !important;
     }
+
+    .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+    }
+
+    .lenis.lenis-stopped {
+    overflow: hidden;
+    }
+
+    .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+    }
+    /* LENIS END*/
 
     img {
         width: 100%;
@@ -43,6 +58,8 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        padding-bottom: 4rem;
+        padding-top: 4rem;
     }
 </style>
 
@@ -57,9 +74,8 @@
         </svg>
     </a>
 </div>
-<section style="height: 50vh;">
-    <!-- <section> -->
-      <div class="container text-center">
+<section style="min-height: 50vh; height: auto;">
+    <div class="container text-center">
         <img src="/favicon.png" class="mb-3" alt="Waving hand" style="width: 40px; height: auto;">
         <h1 class="mb-4">MotionSwiper</h1>
         <p>Introducing MotionSwiper – a minimal draggable slider with a seamless and fluid bending motion effect.<br>
@@ -70,8 +86,8 @@
         <p>
             <a href="https://github.com/jramke/motion-swiper" class="btn btn-outline-dark mt-3" target="_blank">Getting started</a>
         </p>
-      </div>
-    </section>
+    </div>
+</section>
 <section>
     <div class="motion-swiper">
         <div class="motion-swiper__wrapper">
