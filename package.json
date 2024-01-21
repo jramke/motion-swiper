@@ -4,6 +4,7 @@
 	"license": "MIT",
 	"description": "Draggable slider with a fluid bending motion effect but no Threejs as usual",
 	"homepage": "https://motion-swiper.vercel.app/",
+	"author": "Joost Ramke <jstrmk@gmail.com> (https://joostramke.com/)",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/jramke/motion-swiper"
