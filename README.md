@@ -1,5 +1,7 @@
 # <img src="static/favicon.png" height="20" /> MotionSwiper
 
+![](motion-swiper-demo.mp4)
+
 Introducing MotionSwiper – a minimal draggable slider with a seamless and fluid bending motion effect like seen in [this pen by Jesper Landberg](https://codepen.io/ReGGae/live/povjKxV).
 
 It's built with GSAP and does not rely on WebGL/ThreeJs or Canvas, ensuring there are no drawbacks in terms of **accessibility** or **performance**.

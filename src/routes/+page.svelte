@@ -1,19 +1,21 @@
 <script>
     import '$lib/motionSwiper.scss';
+    import MotionSwiper from "$lib/motionSwiper.js";
+    
     import { gsap } from "gsap";
     import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-    import MotionSwiper from "$lib/motionSwiper.js";
-    import Lenis from '@studio-freight/lenis';
+    import Lenis from 'lenis'
 	import { onMount } from 'svelte';
 
     onMount(() => {
-        // gsap.registerPlugin(ScrollTrigger);
-        // const lenis = new Lenis()
-        // lenis.on('scroll', ScrollTrigger.update)
-        // gsap.ticker.add((time)=>{
-        //     lenis.raf(time * 1000)
-        // })
-        // gsap.ticker.lagSmoothing(0)
+        gsap.registerPlugin(ScrollTrigger);
+        const lenis = new Lenis()
+        lenis.on('scroll', ScrollTrigger.update)
+        gsap.ticker.add((time)=>{
+            lenis.raf(time * 1000)
+        })
+        gsap.ticker.lagSmoothing(0);
+        console.log('lenis', lenis);
 
         const motionSwiper = new MotionSwiper('.motion-swiper', {
             // teasing: false,
@@ -34,24 +36,24 @@
 
 
     /* LENIS START */
-    html.lenis {
-    height: auto;
+    :global(html.lenis) {
+        height: auto;
     }
 
-    .lenis.lenis-smooth {
-    scroll-behavior: auto !important;
+    :global(.lenis.lenis-smooth) {
+        scroll-behavior: auto !important;
     }
 
-    .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
+    :global(.lenis.lenis-smooth [data-lenis-prevent]) {
+        overscroll-behavior: contain;
     }
 
-    .lenis.lenis-stopped {
-    overflow: hidden;
+    :global(.lenis.lenis-stopped) {
+        overflow: hidden;
     }
 
-    .lenis.lenis-scrolling iframe {
-    pointer-events: none;
+    :global(.lenis.lenis-scrolling iframe) {
+        pointer-events: none;
     }
     /* LENIS END*/
 
@@ -83,7 +85,7 @@
     </a>
 </div>
 <section style="min-height: 50vh;">
-    <div class="container text-center">
+    <div class="container" style="max-width: 800px;">
         <img src="/favicon.png" class="mb-3" alt="Waving hand" style="width: 40px; height: auto;">
         <h1 class="mb-4">MotionSwiper</h1>
         <p>Introducing MotionSwiper – a minimal draggable slider with a seamless and fluid bending motion effect.<br>
@@ -96,7 +98,7 @@
         </p>
     </div>
 </section>
-<section style="padding-bottom: 8rem;">
+<section>
     <div class="motion-swiper">
         <div class="motion-swiper__wrapper">
             <div class="motion-swiper__slide">
@@ -130,5 +132,10 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <p class="mb-0 text-center">Made by <a class="text-body" target="_blank" href="https://joostramke.com">Joost</a></p>
     </div>
 </section>
