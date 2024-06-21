@@ -1,6 +1,8 @@
 # <img src="static/favicon.png" height="20" /> MotionSwiper
 
-![](motion-swiper-demo.mp4)
+<video controls playsinline autoplay muted loop>
+  <source src="motion-swiper-demo.mp4" type="video/mp4">
+</video>
 
 Introducing MotionSwiper – a minimal draggable slider with a seamless and fluid bending motion effect like seen in [this pen by Jesper Landberg](https://codepen.io/ReGGae/live/povjKxV).
 
