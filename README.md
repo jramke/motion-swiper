@@ -1,8 +1,6 @@
 # <img src="static/favicon.png" height="20" /> MotionSwiper
 
-<video controls playsinline autoplay muted loop>
-  <source src="motion-swiper-demo.mp4" type="video/mp4">
-</video>
+![](https://motion-swiper.vercel.app/motion-swiper-demo.mp4)
 
 Introducing MotionSwiper – a minimal draggable slider with a seamless and fluid bending motion effect like seen in [this pen by Jesper Landberg](https://codepen.io/ReGGae/live/povjKxV).
 
